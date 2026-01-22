@@ -30,4 +30,4 @@ jobs:
           python -m venv venv
           source venv/bin/activate
           pip install dist/*.whl
-          python -c "from my_lib.math_utils import sub; print('2+3 =', sub(2,3))"
+          python -c "from my_lib.math_utils import sub; print('addition result =', sub(2,3))"
