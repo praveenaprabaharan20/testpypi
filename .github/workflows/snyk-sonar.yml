@@ -32,10 +32,12 @@ jobs:
   snyk:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      
+      - name: Install Snyk
+        run: npm install -g snyk
+      
       - name: Snyk Scan
-        timeout-minutes: 5
-        uses: snyk/actions/node@v3
+        run: snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
